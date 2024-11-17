@@ -10,8 +10,7 @@ void start_repl() {
         printf("Entrez une commande (insert/select/exit): ");
         fgets(command, sizeof(command), stdin);
 
-        // Supprimer le saut de ligne
-        command[strcspn(command, "\n")] = 0;
+        command[strcspn(command, "\n")] = 0; // supprimer le saut de ligne
 
         if (strcmp(command, "insert") == 0) {
             insert_data();

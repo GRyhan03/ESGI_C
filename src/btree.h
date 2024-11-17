@@ -1,8 +1,7 @@
 #ifndef BTREE_H
 #define BTREE_H
 
-// Déclaration des structures et fonctions
-typedef struct Node {
+typedef struct Node { // declaration des structures et fonctions
     char data[256];
     struct Node *left, *right;
 } Node;

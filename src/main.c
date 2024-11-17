@@ -1,15 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h> // Nécessaire pour configurer l'encodage
-#include "repl.h"  // Inclure repl.h
+#include <locale.h> //encodage
+#include "repl.h"  // inclure repl.h
 
 int main() {
-    setlocale(LC_ALL, ""); // Configure l'encodage en UTF-8 pour tout le programme
+    setlocale(LC_ALL, ""); // configure l'encodage en UTF-8 pour tout le programme
 
     printf("Bienvenue dans la base de données simple !\n");
 
-    // Lancement de la boucle REPL (Read-Eval-Print-Loop)
-    start_repl();
+    start_repl(); // lancement de la boucle REPL
 
     return 0;
 }

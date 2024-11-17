@@ -5,39 +5,34 @@
 
 Node *root = NULL;
 
-// Fonction pour créer un nouveau noeud
-Node* create_node(char *data) {
+Node* create_node(char *data) { // fonction pour creer un nouveau noeud
     Node *new_node = (Node *)malloc(sizeof(Node));
     strcpy(new_node->data, data);
     new_node->left = new_node->right = NULL;
     return new_node;
 }
 
-// Fonction pour insérer une donnée dans l'arbre
-void insert_data() {
+void insert_data() { // fonction pour inserer une donnee dans larbre
     char data[256];
     printf("Entrez la donnee a inserer : ");
     fgets(data, sizeof(data), stdin);
-    data[strcspn(data, "\n")] = 0; // Supprimer le saut de ligne
+    data[strcspn(data, "\n")] = 0; // supprimer le saut de ligne
 
     Node *new_node = create_node(data);
 
-    // Insertion dans l'arbre binaire
-    if (root == NULL) {
+    if (root == NULL) {  // insertion dans l'arbre binaire
         root = new_node;
     } else {
         Node *current = root;
         while (1) {
             if (strcmp(data, current->data) < 0) {
-                // Aller à gauche
-                if (current->left == NULL) {
+                if (current->left == NULL) { // aller a gauche
                     current->left = new_node;
                     break;
                 }
                 current = current->left;
             } else {
-                // Aller à droite
-                if (current->right == NULL) {
+                if (current->right == NULL) { // aller a gauche
                     current->right = new_node;
                     break;
                 }
@@ -48,8 +43,7 @@ void insert_data() {
     printf("Donnee inseree avec succes !\n");
 }
 
-// Fonction pour afficher les données (traversée en ordre)
-void select_data() {
+void select_data() { // fonction pour afficher les donnees 
     if (root == NULL) {
         printf("Aucune donnee a afficher.\n");
         return;
@@ -59,8 +53,7 @@ void select_data() {
     inorder_traversal(root);
 }
 
-// Fonction pour traverser l'arbre en ordre et afficher les données
-void inorder_traversal(Node *node) {
+void inorder_traversal(Node *node) { // fonction pour traverser larbre en ordre et afficher les donnees
     if (node != NULL) {
         inorder_traversal(node->left);
         printf("%s\n", node->data);
