@@ -1,26 +1,28 @@
-CC = gcc
-CFLAGS = -Wall -g
+CC=gcc
+CFLAGS=-Wall -g
 
 # Fichiers objets
-OBJ = main.o repl.o btree.o
+OBJ=main.o repl.o btree.o
 
-# Cible finale
-all: main
+# Cible par défaut
+all: mon_programme
 
-# Compilation des fichiers objets
-main: $(OBJ)
-	$(CC) $(OBJ) -o main
+# Construction de l'exécutable
+mon_programme: $(OBJ)
+	$(CC) $(CFLAGS) -o mon_programme $(OBJ)
 
-main.o: main.c
+# Compilation de main.o
+main.o: main.c repl.h btree.h
 	$(CC) $(CFLAGS) -c main.c
 
-repl.o: repl.c
+# Compilation de repl.o
+repl.o: repl.c repl.h
 	$(CC) $(CFLAGS) -c repl.c
 
-btree.o: btree.c
+# Compilation de btree.o
+btree.o: btree.c btree.h
 	$(CC) $(CFLAGS) -c btree.c
 
-# Nettoyage des fichiers objets
+# Nettoyage des fichiers objets et de l'exécutable
 clean:
-	rm -f *.o main
-
+	rm -f *.o mon_programme
