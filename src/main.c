@@ -5,9 +5,11 @@
 #include <string.h>
 
 
-int main(int argc, char* argv[], char* envp[]){
-  
-  repl();
-  return 0;
-  
+int main() {
+    printf("Bienvenue dans la base de données simple !\n");
+
+    // Lancement de la boucle REPL (Read-Eval-Print-Loop)
+    start_repl();
+
+    return 0;
 }
