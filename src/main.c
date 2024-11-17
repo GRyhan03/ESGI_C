@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "repl.c"
-#include <stdbool.h>
-#include <string.h>
-
+#include "repl.h"  // Inclure repl.h
 
 int main() {
     printf("Bienvenue dans la base de données simple !\n");

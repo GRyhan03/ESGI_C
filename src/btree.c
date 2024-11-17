@@ -1,11 +1,7 @@
+#include "btree.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-typedef struct Node {
-    char data[256];
-    struct Node *left, *right;
-} Node;
 
 Node *root = NULL;
 
