@@ -6,7 +6,7 @@
 int main() {
     setlocale(LC_ALL, ""); // configure l'encodage en UTF-8 pour tout le programme
 
-    printf("Bienvenue dans la base de données simple !\n");
+    printf("Bienvenue dans la base de donnees simple !\n");
 
     start_repl(); // lancement de la boucle REPL
 
