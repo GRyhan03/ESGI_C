@@ -1,2 +1,2 @@
 # class_db
-A simple skeleton code in C for a database
+Un simple code squelette en C pour une base de données
