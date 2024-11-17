@@ -16,7 +16,7 @@ Node* create_node(char *data) {
 // Fonction pour insérer une donnée dans l'arbre
 void insert_data() {
     char data[256];
-    printf("Entrez la donnée à insérer : ");
+    printf("Entrez la donnee a inserer : ");
     fgets(data, sizeof(data), stdin);
     data[strcspn(data, "\n")] = 0; // Supprimer le saut de ligne
 
@@ -45,17 +45,17 @@ void insert_data() {
             }
         }
     }
-    printf("Donnée insérée avec succès !\n");
+    printf("Donnee inseree avec succes !\n");
 }
 
 // Fonction pour afficher les données (traversée en ordre)
 void select_data() {
     if (root == NULL) {
-        printf("Aucune donnée à afficher.\n");
+        printf("Aucune donnee a afficher.\n");
         return;
     }
 
-    printf("Données dans l'arbre :\n");
+    printf("Donnees dans l'arbre :\n");
     inorder_traversal(root);
 }
 
